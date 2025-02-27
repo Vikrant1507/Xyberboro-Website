@@ -1,4 +1,300 @@
+/* Reset Styles */
+body,
 html {
-  height: 100%;
-  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 80vh;
+  background: url('images/hero.jpg') no-repeat center center/cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.logo {
+  width: 150px;
+}
+
+/* Navbar */
+.navbar {
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.navbar-brand img {
+  width: 50px;
+  margin-right: 20px;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.navbar-nav .nav-item {
+  padding: 0 10px;
+}
+
+.navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.989) !important;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 8px 12px;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #fff !important;
+  font-weight: bold;
+}
+
+.navbar-nav .custom-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.625rem;
+  font-size: 1rem;
+  padding: 8px 20px;
+  border: 2px solid white;
+  border-radius: 50px;
+  background: black;
+  font-weight: bold;
+  margin: 0 10px;
+  text-transform: uppercase;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* Remove Bootstrap Dropdown Arrow - only if using CSS method */
+.navbar .dropdown-toggle::after {
+  display: none !important;
+}
+
+/*  Performance Dropdown Menu */
+.dropdown-menu {
+  background-color: black;
+  border: none;
+  padding: 10px 0;
+  min-width: 220px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.dropdown-menu .dropdown-item {
+  background-color: black;
+  color: white;
+  font-size: 14px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  transition: background 0.3s;
+  margin-top: 0px;
+  margin-bottom: 0px;
+
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: #867b7b80;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/* Show Dropdown on Hover for Desktop */
+@media (min-width: 992px) {
+  .navbar .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
+}
+
+/*  Fashion Dropdown Menu -  */
+.dropdown-menu {
+  background-color: black;
+  border: none;
+  padding: 10px 0;
+  min-width: 220px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.dropdown-menu .dropdown-item {
+  background-color: black;
+  color: white;
+  font-size: 14px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  transition: background 0.3s;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: #867b7b80;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/* Replace this section
+@media (min-width: 992px) {
+  .navbar .dropdown:hover .dropdown-menu1 {
+    display: block;
+    margin-top: 0;
+  }
+} */
+
+/* With this simpler media query that works for all dropdowns */
+@media (min-width: 992px) {
+  .navbar .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
+}
+
+/* Care Dropdown (Non-Bootstrap) Styles - START */
+.care-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.care-dropdown-content {
+  display: none;
+  position: absolute;
+  background: black;
+  min-width: 160px;
+  z-index: 1000;
+  /* Changed from -1 to 1000 to ensure it appears above other elements */
+  margin-top: 0;
+  top: 100%;
+  /* Position it right below the link */
+  left: 0;
+}
+
+.care-dropdown-content a {
+  color: white;
+  /* Added !important to override Bootstrap */
+  padding: 10px 20px;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+  text-transform: uppercase;
+  transition: background 0.3s;
+  background-color: black !important;
+  /* Added to ensure black background */
+}
+
+.care-dropdown-content a:hover {
+  background-color: #867b7b80 !important;
+  color: white !important;
+  /* Ensure text stays white on hover */
+  text-decoration: none;
+}
+
+.care-dropdown:hover .care-dropdown-content {
+  display: block;
+}
+
+/* Handle responsive behavior for Care dropdown */
+@media (max-width: 991px) {
+  .care-dropdown-content {
+    position: static;
+    width: 100%;
+    text-align: center;
+  }
+
+  .care-dropdown-content a {
+    padding: 10px;
+  }
+}
+
+/* Care Dropdown (Non-Bootstrap) Styles - END */
+
+/* Features Section */
+.features {
+  padding: 50px 0;
+  background: white;
+  text-align: center;
+  color: black;
+}
+
+.features h2 {
+  margin-bottom: 40px;
+}
+
+.features img {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.features p {
+  font-weight: bold;
+}
+
+/* Learn More Section */
+.learn-more {
+  padding: 40px 0;
+  background: white;
+  text-align: center;
+  color: black;
+}
+
+.learn-more .btn {
+  background: black;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  transition: background 0.3s;
+  margin-top: 15px;
+}
+
+.learn-more .btn:hover {
+  background: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .navbar-nav {
+    gap: 10px;
+  }
+
+  .navbar-nav .custom-btn {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 60vh;
+  }
+
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 10px;
+  }
+
+  .features .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .features .col-md-4 {
+    margin-bottom: 30px;
+  }
 }

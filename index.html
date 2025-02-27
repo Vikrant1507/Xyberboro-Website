@@ -1,16 +1,122 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Xyberboro Website</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
 </head>
 
 <body>
-  Hello world
-  <script src="script.js"></script>
+  <!-- HERO SECTION WITH LOGO -->
+  <header class="hero">
+    <div class="overlay">
+      <!-- Overlay is likely used to apply styling (such as a semi-transparent background) -->
+      <img src="https://www.logodesignlove.com/images/classic/woolmark-logo.gif" alt="Xyberboro logo" class="logo" />
+    </div>
+  </header>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+    <!-- class="navbar": This class is a Bootstrap utility that applies default navbar styles.
+navbar-expand-lg: Ensures the navbar expands (shows all items) on large (lg) screens and collapses into a toggle menu on smaller screens.
+navbar-dark: Applies a dark theme to the navbar, making text and links light-colored for contrast.
+bg-black: Sets the background color of the navbar to black. -->
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="https://www.logodesignlove.com/images/classic/woolmark-logo.gif"
+          alt="Logo" width="50"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <!-- Dropdown for Performance -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="performanceDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <b>PERFORMANCE</b>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="performanceDropdown">
+              <li><a class="dropdown-item" href="#">Luna Rossa Prada Pirelli</a></li>
+              <li><a class="dropdown-item" href="#">Nissan Formula E</a></li>
+              <li><a class="dropdown-item" href="#">Salomon</a></li>
+              <li><a class="dropdown-item" href="#">Vilebrequin</a></li>
+              <li><a class="dropdown-item" href="#">Saul Nash</a></li>
+              <li><a class="dropdown-item" href="#">Prada Linea Rossa</a></li>
+            </ul>
+          </li>
+
+          <!-- Dropdown For Fashion - FIXED -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="fashionDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false"> <b>FASHION</b>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="fashionDropdown">
+              <li><a class="dropdown-item" href="#">APPAREL</a></li>
+              <li><a class="dropdown-item" href="#">DIY</a></li>
+              <li><a class="dropdown-item" href="#">INTERIORS</a></li>
+              <li><a class="dropdown-item" href="#">SUITING</a></li>
+            </ul>
+          </li>
+
+          <!-- Dropdown for Care -->
+          <li class="nav-item dropdown care-dropdown">
+            <a class="nav-link care-toggle" href="#">
+              <b>CARE</b>
+            </a>
+            <div class="care-dropdown-content">
+              <a href="#">WASH</a>
+              <a href="#">DRY</a>
+              <a href="#">MEND</a>
+              <a href="#">STORE</a>
+            </div>
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="#"><b>Environment</b></a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><b>Fibre</b></a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><b>Shop Wool</b></a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-search"></i></a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-person"></i></a></li>
+          <li class="nav-item"><a class="btn btn-outline-light custom-btn" href="#"><b>Woolmark for Business</b></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- FEATURES SECTION -->
+  <section class="features text-center">
+    <h2>Nature's Promise, Quality Assured</h2>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <img src="images/woolmark1.png" alt="Woolmark Pure Wool">
+          <p>Woolmark Pure New Wool</p>
+        </div>
+        <div class="col-md-4">
+          <img src="images/woolmark2.png" alt="Woolmark Rich Blend">
+          <p>Woolmark Wool Rich Blend</p>
+        </div>
+        <div class="col-md-4">
+          <img src="images/woolmark3.png" alt="Woolmark Blend">
+          <p>Woolmark Wool Blend</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEARN MORE SECTION -->
+  <section class="learn-more text-center">
+    <p>The iconic Woolmark logo represents an unwavering commitment to quality.</p>
+    <a href="#" class="btn btn-dark">Learn More</a>
+  </section>
+
+  <!-- BOOTSTRAP SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>
