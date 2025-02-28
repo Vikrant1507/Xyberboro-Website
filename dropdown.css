@@ -1,0 +1,243 @@
+/* Fashion Dropdown (Non-Bootstrap) Styles - START */
+.fashion-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.fashion-dropdown-content {
+    display: none;
+    position: absolute;
+    background: black;
+    min-width: 160px;
+    z-index: 1000;
+    /* Changed from -1 to 1000 to ensure it appears above other elements */
+    margin-top: 0;
+    top: 100%;
+    /* Position it right below the link */
+    left: 0;
+}
+
+.fashion-dropdown-content a {
+    color: white !important;
+    /* Added !important to override Bootstrap */
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: background 0.3s;
+    background-color: black !important;
+    /* Added to ensure black background */
+}
+
+.fashion-dropdown-content a:hover {
+    background-color: #CCCCCC !important;
+    /* Light gray color like in the image */
+    color: #000000 !important;
+    /* Black text on hover */
+    text-decoration: none;
+}
+
+.fashion-dropdown:hover .fashion-dropdown-content {
+    display: block;
+}
+
+/* Handle responsive behavior for Care dropdown */
+@media (max-width: 991px) {
+    .fashion-dropdown-content {
+        position: static;
+        width: 100%;
+        text-align: center;
+    }
+
+    .fashion-dropdown-content a {
+        padding: 10px;
+    }
+}
+
+/* Fashion Dropdown (Non-Bootstrap) Styles - END */
+
+/* Care Dropdown (Non-Bootstrap) Styles - START */
+.care-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.care-dropdown-content {
+    display: none;
+    position: absolute;
+    background: black;
+    min-width: 160px;
+    z-index: 1000;
+    /* Changed from -1 to 1000 to ensure it appears above other elements */
+    margin-top: 0;
+    top: 100%;
+    /* Position it right below the link */
+    left: 0;
+}
+
+.care-dropdown-content a {
+    color: white;
+    /* Added !important to override Bootstrap */
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: background 0.3s;
+    background-color: black !important;
+    /* Added to ensure black background */
+}
+
+.care-dropdown-content a:hover {
+    background-color: #CCCCCC !important;
+    /* Light gray color like in the image */
+    color: #000000 !important;
+    /* Black text on hover */
+    text-decoration: none;
+}
+
+.care-dropdown:hover .care-dropdown-content {
+    display: block;
+}
+
+/* Handle responsive behavior for Care dropdown */
+@media (max-width: 991px) {
+    .care-dropdown-content {
+        position: static;
+        width: 100%;
+        text-align: center;
+    }
+
+    .care-dropdown-content a {
+        padding: 10px;
+    }
+}
+
+/* Care Dropdown (Non-Bootstrap) Styles - END */
+
+/* Environment Dropdown (Non-Bootstrap) Styles - START */
+.environment-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.environment-dropdown-content {
+    display: none;
+    position: absolute;
+    background: black;
+    min-width: 160px;
+    z-index: 1000;
+    /* Changed from -1 to 1000 to ensure it appears above other elements */
+    margin-top: 0;
+    top: 100%;
+    /* Position it right below the link */
+    left: 0;
+}
+
+.environment-dropdown-content a {
+    color: white;
+    /* Added !important to override Bootstrap */
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: background 0.3s;
+    background-color: black !important;
+    /* Added to ensure black background */
+}
+
+.environment-dropdown a:hover {
+    background-color: #CCCCCC !important;
+    /* Light gray color like in the image */
+    color: #000000 !important;
+    /* Black text on hover */
+    text-decoration: none;
+}
+
+.environment-dropdown:hover .environment-dropdown-content {
+    display: block;
+}
+
+/* Handle responsive behavior for Care dropdown */
+@media (max-width: 991px) {
+    .environment-dropdown-content {
+        position: static;
+        width: 100%;
+        text-align: center;
+    }
+
+    .environment-dropdown-content a {
+        padding: 10px;
+    }
+}
+
+/* Care Dropdown (Non-Bootstrap) Styles - END */
+
+
+/* Environment Dropdown (Non-Bootstrap) Styles - START */
+.fibre-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.fibre-dropdown-content {
+    display: none;
+    position: absolute;
+    background: black;
+    min-width: 160px;
+    z-index: 1000;
+    /* Changed from -1 to 1000 to ensure it appears above other elements */
+    margin-top: 0;
+    top: 100%;
+    /* Position it right below the link */
+    left: 0;
+}
+
+.fibre-dropdown-content a {
+    color: white;
+    /* Added !important to override Bootstrap */
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: background 0.3s;
+    background-color: black !important;
+    white-space: nowrap;
+    /* Prevents text from wrapping to two lines */
+    /* Added to ensure black background */
+}
+
+/* Main dropdown headers - ensure they don't wrap */
+.fibre-dropdown>a {
+    white-space: nowrap;
+}
+
+.fibre-dropdown a:hover {
+    background-color: #CCCCCC !important;
+    /* Light gray color like in the image */
+    color: #000000 !important;
+    /* Black text on hover */
+    text-decoration: none;
+}
+
+.fibre-dropdown:hover .fibre-dropdown-content {
+    display: block;
+}
+
+/* Handle responsive behavior for Environment dropdown */
+@media (max-width: 991px) {
+    .fibre-dropdown-content {
+        position: static;
+        width: 100%;
+        text-align: center;
+    }
+
+    .fibre-dropdown-content a {
+        padding: 10px;
+    }
+}
+
+/* Care Dropdown (Non-Bootstrap) Styles - END */

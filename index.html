@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Xyberboro Website</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="dropdown.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
 </head>
 
@@ -50,16 +51,16 @@ bg-black: Sets the background color of the navbar to black. -->
           </li>
 
           <!-- Dropdown For Fashion - FIXED -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="fashionDropdown" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false"> <b>FASHION</b>
+          <li class="nav-item dropdown fashion-dropdown">
+            <a class="nav-link fashion-toggle" href="#">
+              <b>FASHION</b>
             </a>
-            <ul class="dropdown-menu" aria-labelledby="fashionDropdown">
-              <li><a class="dropdown-item" href="#">APPAREL</a></li>
-              <li><a class="dropdown-item" href="#">DIY</a></li>
-              <li><a class="dropdown-item" href="#">INTERIORS</a></li>
-              <li><a class="dropdown-item" href="#">SUITING</a></li>
-            </ul>
+            <div class="fashion-dropdown-content">
+              <a href="#">APPAREL</a>
+              <a href="#">DIY</a>
+              <a href="#">INTERIORS</a>
+              <a href="#">SUITING</a>
+            </div>
           </li>
 
           <!-- Dropdown for Care -->
@@ -75,8 +76,34 @@ bg-black: Sets the background color of the navbar to black. -->
             </div>
           </li>
 
-          <li class="nav-item"><a class="nav-link" href="#"><b>Environment</b></a></li>
-          <li class="nav-item"><a class="nav-link" href="#"><b>Fibre</b></a></li>
+          <!-- Dropdown for Environment  -->
+          <li class="nav-item dropdown environment-dropdown">
+            <a class="nav-link environment-toggle" href="#">
+              <b>Environment</b>
+            </a>
+            <div class="environment-dropdown-content">
+              <a href="#">WEAR WOOL</a>
+              <a href="#">OUR VISION</a>
+              <a href="#">OCEAN HEALTH</a>
+              <a href="#">ANIMAL WELFARE</a>
+              <a href="#">LAND HEALTH</a>
+            </div>
+          </li>
+
+          <!-- Dropdown for Fibre -->
+          <li class="nav-item dropdown fibre-dropdown">
+            <a class="nav-link fibre-toggle" href="#">
+              <b>FIBRE</b>
+            </a>
+            <div class="fibre-dropdown-content">
+              <a href="#">WHAT IS MERINO WOOL?</a>
+              <a href="#">MEET OUR WOOLGROWER</a>
+              <a href="#">ARE YOU ALLERGIC TO WOOL</a>
+              <a href="#">HISTORY OF MERINO WOOL</a>
+
+            </div>
+          </li>
+
           <li class="nav-item"><a class="nav-link" href="#"><b>Shop Wool</b></a></li>
           <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-search"></i></a></li>
           <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-person"></i></a></li>
@@ -116,7 +143,7 @@ bg-black: Sets the background color of the navbar to black. -->
 
   <!-- BOOTSTRAP SCRIPTS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
+  <script src="script.js"></script>
 </body>
 
 </html>
