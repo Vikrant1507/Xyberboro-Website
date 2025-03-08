@@ -1,22 +1,139 @@
+/* Main container that holds both panels */
 .main-content {
     display: flex;
-    width: 100;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.sustainability-panel {
-    position: relative;
-    width: 50;
-    height: 600px;
-}
-
-.panel-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
+    /* Creates a horizontal flex container */
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.8);
+    /* Full width of the viewport */
+    height: 100vh;
+    /* Full height of the viewport (100% of viewport height) */
+}
+
+/* Common styles for both panels */
+.sustainability-panel,
+.wonderofwool-panel {
+    position: relative;
+    /* Establishes a positioning context for absolute elements inside */
+    width: 50%;
+    /* Each panel takes half the width */
+    overflow: hidden;
+    /* Hides any content that exceeds the panel boundaries */
+    display: flex;
+    /* Makes the panel itself a flex container */
+    align-items: center;
+    /* Vertically centers the content */
+    justify-content: center;
+    /* Horizontally centers the content */
+}
+
+/* Green background for the sustainability panel */
+.sustainability-panel {
+    background-color: #006400;
+    /* Dark green color */
+}
+
+/* Tan/brown background for the wool panel */
+.wonderofwool-panel {
+    background-color: #b19980;
+    /* Light brown/tan color */
+}
+
+/* Container for the text content within each panel */
+.panel-content {
+    text-align: center;
+    /* Centers the text */
+    color: white;
+    /* White text color */
+    padding: 20px;
+    /* Space around the content */
+    max-width: 80%;
+    /* Limits width to 80% of the panel width */
+    position: relative;
+    /* Needed for proper z-index stacking */
+    z-index: 2;
+    /* Ensures content appears above the background text */
+}
+
+/* Style for the panel headings */
+.panel-title {
+    font-size: 36px;
+    /* Large font size for titles */
+    font-weight: bold;
+    /* Bold font weight */
+    margin-bottom: 20px;
+    /* Space below the title */
+}
+
+/* Style for the descriptive text */
+.panel-description {
+    line-height: 1.6;
+    /* Increases line spacing for readability */
+    margin-bottom: 30px;
+    /* Space below the description */
+    font-size: 16px;
+    /* Font size for description text */
+}
+
+/* Style for the "LEARN MORE" links */
+.learn-more-link {
+    color: white;
+    /* White text color */
+    text-decoration: none;
+    /* Removes default underline */
+    text-transform: uppercase;
+    /* Converts text to all caps */
+    font-weight: bold;
+    /* Bold font weight */
+    letter-spacing: 1px;
+    /* Adds space between letters */
+    border-bottom: 2px solid white;
+    /* Custom underline effect */
+    padding-bottom: 3px;
+    /* Space between text and underline */
+    transition: border-color 0.3s;
+    /* Smooth transition for hover effect */
+}
+
+/* Hover effect for the links */
+.learn-more-link:hover {
+    border-color: rgba(255, 255, 255, 0.7);
+    /* Makes the underline slightly transparent on hover */
+}
+
+/* Style for the large "600x600" background text */
+.panel-bg-text {
+    position: absolute;
+    /* Positions text independently within the panel */
+    font-size: 220px;
+    /* Very large font size */
+    font-weight: bold;
+    /* Bold font weight */
+    opacity: 0.1;
+    /* Makes the text mostly transparent */
+    color: white;
+    /* White text color */
+    z-index: 1;
+    /* Positions it below the content but above background */
+    user-select: none;
+    /* Prevents text selection */
+}
+
+/* Media query for responsive design on smaller screens */
+@media screen and (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+        /* Stacks panels vertically instead of side by side */
+    }
+
+    .sustainability-panel,
+    .wonderofwool-panel {
+        width: 100%;
+        /* Each panel takes full width */
+        height: 50vh;
+        /* Each panel takes half of the viewport height */
+    }
+
+    .panel-bg-text {
+        font-size: 150px;
+        /* Reduced font size for smaller screens */
+    }
 }
