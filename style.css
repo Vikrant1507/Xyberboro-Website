@@ -11,6 +11,8 @@ html {
   position: relative;
   height: 80vh;
   background: url('images/hero.jpg') no-repeat center center/cover;
+  padding-top: 60px;
+  /* Add this line - adjust the value based on your navbar height */
 }
 
 .overlay {
@@ -31,6 +33,14 @@ html {
   justify-content: center;
   align-items: center;
   background-color: black;
+  position: fixed !important;
+  /* Add this line */
+  width: 100% !important;
+  /* Make sure it spans the full width */
+  top: 0 !important;
+  /* Position it at the top of the viewport */
+  z-index: 1000 !important;
+  /* Ensure it stays on top of other content */
 }
 
 .navbar-brand img {
@@ -85,45 +95,67 @@ html {
   display: none !important;
 }
 
-/*  Performance Dropdown Menu */
-.dropdown-menu {
-  background-color: black;
-  border: none;
-  padding: 10px 0;
-  min-width: 220px;
-  margin-top: 0px;
-  margin-bottom: 0px;
+/* Performance Dropdown (Non-Bootstrap) */
+.performance-dropdown {
+  position: relative;
 }
 
-.dropdown-menu .dropdown-item {
+.performance-dropdown .nav-link {
+  color: rgba(255, 255, 255, 0.989) !important;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 8px 12px;
+  transition: color 0.3s ease-in-out;
+}
+
+.performance-dropdown-content {
+  display: none;
+  position: absolute;
   background-color: black;
   color: white;
-  font-size: 14px;
+  min-width: 220px;
+  text-align: center;
+  z-index: 1000;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.performance-dropdown-content a {
+  color: white;
   padding: 10px 20px;
+  display: block;
+  font-size: 14px;
   text-transform: uppercase;
   transition: background 0.3s;
-  margin-top: 0px;
-  margin-bottom: 0px;
-
 }
 
-.dropdown-menu .dropdown-item:hover {
-  background-color: #867b7b80;
-  margin-top: 0px;
-  margin-bottom: 0px;
+.performance-dropdown-content a:hover {
+  background-color: #CCCCCC;
+  color: white;
+  text-decoration: none;
 }
 
-/* Show Dropdown on Hover for Desktop */
+/* Show Performance Dropdown on Hover for Desktop */
 @media (min-width: 992px) {
-  .navbar .dropdown:hover .dropdown-menu {
+  .performance-dropdown:hover .performance-dropdown-content {
     display: block;
-    margin-top: 0;
+  }
+}
+
+/* Responsive Performance Dropdown */
+@media (max-width: 991px) {
+  .performance-dropdown-content {
+    position: static;
+    width: 100%;
+    transform: none;
+    text-align: center;
   }
 }
 
 /* Features Section */
 .features {
-  padding: 50px 0;
+  padding: 30px 0;
   background: white;
   text-align: center;
   color: black;
@@ -138,30 +170,59 @@ html {
   margin-bottom: 10px;
 }
 
-.features p {
+/* Add these styles for the woolmark text */
+.woolmark-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
   font-weight: bold;
+}
+
+.woolmark-text .brand {
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.woolmark-text .description {
+  color: #0c0808;
+  font-size: 14px;
+  text-transform: uppercase;
+  font: bold;
+}
+
+.woolmark-description {
+  color: black !important;
+  margin-top: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.0625rem;
 }
 
 /* Learn More Section */
 .learn-more {
-  padding: 40px 0;
+  padding-top: 20px !important;
+  /* Set top padding to 20px */
+  padding-bottom: 40px;
+  /* Keep bottom padding at 40px */
+  padding-left: 0;
+  padding-right: 0;
   background: white;
   text-align: center;
   color: black;
 }
 
-.learn-more .btn {
-  background: black;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
+.learn-more-link {
+  color: black;
+  text-decoration: underline;
   text-transform: uppercase;
-  transition: background 0.3s;
-  margin-top: 15px;
+  transition: color 0.3s;
 }
 
-.learn-more .btn:hover {
-  background: #333;
+.learn-more-link:hover {
+  color: #333;
 }
 
 /* Responsive Design */

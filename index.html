@@ -8,6 +8,7 @@
   <link href="style.css" rel="stylesheet" type="text/css" />
   <link href="dropdown.css" rel="stylesheet" type="text/css">
   <link href="feature_and_learnmore.css" rel="stylesheet" type="text/css">
+  <link href="panel.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
 </head>
 
@@ -22,35 +23,34 @@
 
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-black">
-    <!-- class="navbar": This class is a Bootstrap utility that applies default navbar styles.
-navbar-expand-lg: Ensures the navbar expands (shows all items) on large (lg) screens and collapses into a toggle menu on smaller screens.
-navbar-dark: Applies a dark theme to the navbar, making text and links light-colored for contrast.
-bg-black: Sets the background color of the navbar to black. -->
     <div class="container">
       <a class="navbar-brand" href="#"><img src="https://www.logodesignlove.com/images/classic/woolmark-logo.gif"
           alt="Logo" width="50"></a>
+
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <!-- Dropdown for Performance -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="performanceDropdown" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">
+
+          <!-- Performance Dropdown - Non-Bootstrap -->
+          <li class="nav-item performance-dropdown">
+            <a class="nav-link" href="#">
               <b>PERFORMANCE</b>
             </a>
-            <ul class="dropdown-menu" aria-labelledby="performanceDropdown">
-              <li><a class="dropdown-item" href="#">Luna Rossa Prada Pirelli</a></li>
-              <li><a class="dropdown-item" href="#">Nissan Formula E</a></li>
-              <li><a class="dropdown-item" href="#">Salomon</a></li>
-              <li><a class="dropdown-item" href="#">Vilebrequin</a></li>
-              <li><a class="dropdown-item" href="#">Saul Nash</a></li>
-              <li><a class="dropdown-item" href="#">Prada Linea Rossa</a></li>
-            </ul>
+            <div class="performance-dropdown-content">
+              <a href="#">Luna Rossa Prada Pirelli</a>
+              <a href="#">Nissan Formula E</a>
+              <a href="#">Salomon</a>
+              <a href="#">Vilebrequin</a>
+              <a href="#">Saul Nash</a>
+              <a href="#">Prada Linea Rossa</a>
+            </div>
           </li>
 
+          <!-- Keep the rest of your dropdowns as they are -->
           <!-- Dropdown For Fashion - FIXED -->
           <li class="nav-item dropdown fashion-dropdown">
             <a class="nav-link fashion-toggle" href="#">
@@ -117,9 +117,9 @@ bg-black: Sets the background color of the navbar to black. -->
   </nav>
 
   <!-- FEATURES SECTION -->
-  <section class="features text-center"> <!-- [CHANGE 1] Consistent markup for each column -->
-    <div class="container">
-      <h2>Nature's Promise, Quality Assured</h2> <!-- [CHANGE 2] Added consistent image sizing -->
+  <section class="features text-center">
+    <div class="container"><!-- [CHANGE 1] Added container-fluid for full-width layout -->
+      <h2>Nature's Promise, Quality Assured</h2>
       <div class="row"> <!-- [CHANGE 3] Consistent markup for each column -->
         <div class="col-md-4 text-center"> <!-- [CHANGE 4] Added consistent image sizing -->
           <img src="https://www.logodesignlove.com/images/classic/woolmark-logo.gif" alt="Woolmark Pure New Wool">
@@ -137,7 +137,9 @@ bg-black: Sets the background color of the navbar to black. -->
           </p>
         </div>
         <div class="col-md-4 text-center">
-          <img src="path/to/woolmark-logo3.png" alt="Woolmark Wool Blend">
+          <img
+            src="data:image/png;base64,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"
+            alt="Woolmark Wool Blend">
           <p class="woolmark-text">
             <span class="brand">WOOLMARK</span>
             <span class="description">WOOL BLEND</span>
@@ -145,17 +147,48 @@ bg-black: Sets the background color of the navbar to black. -->
         </div>
       </div>
       <p class="woolmark-description">
+        <br>
         The iconic Woolmark logo represents an unwavering commitment to quality, ensuring outstanding performance and
         guaranteed fibre content in every certified product.
       </p>
     </div>
   </section>
 
+  <!-- Two Panels -->
+  <div class="main-content">
+    <!-- Sustainibility Panel -->
+    <div class="Sustainibility-panel">
+      <img src="sustainability-image.jpg" alt="sustainability-image.jpg" class="panel-bg">
+      <div class="panel-content">
+        <h2 class="panel-title">Sustainibility</h2>
+        <p class="panel-description">Wool is 100% natural, renewable, biodegradable and the world's most recycled
+          apparel fibre.</p>
+        <a href="#" class="learn-more-link">LEARN MORE</a>
+      </div>
+    </div>
+
+    <!-- Wonder for Wool Panel -->
+    <div class="wonderofwool-panel">
+      <img src="wool-texture.jpg" alt="Hands working with wool" class="panel-bg">
+      <div class="panel-content">
+        <h2 class="panel-title">Wonders of Wool</h2>
+        <p class="panel-description">Merino wool is renowned for its next-to-skin softness, strength, innate versatility
+          and technical benefits, extending its use from luxury fashion to high-performance activewear, accessories,
+          homewares and everything in between.</p>
+        <a href="#" class="learn-more-link">LEARN MORE</a>
+      </div>
+    </div>
+
+  </div>
+
+
   <!-- LEARN MORE SECTION -->
   <section class="learn-more text-center">
-    <p>The iconic Woolmark logo represents an unwavering commitment to quality.</p>
-    <a href="#" class="btn btn-dark">Learn More</a>
+    <!-- <p>The iconic Woolmark logo represents an unwavering commitment to quality.</p> -->
+    <a href="#" class="learn-more-link">Learn More</a>
   </section>
+
+
 
   <!-- BOOTSTRAP SCRIPTS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

@@ -42,7 +42,7 @@
     display: block;
 }
 
-/* Handle responsive behavior for Care dropdown */
+/* Handle responsive behavior for fashion dropdown */
 @media (max-width: 991px) {
     .fashion-dropdown-content {
         position: static;
