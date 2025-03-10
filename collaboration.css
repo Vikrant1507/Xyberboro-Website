@@ -8,7 +8,7 @@
 
 .collaborations-title {
     font-size: 42px;
-    color: #000;
+    color: grey;
     text-align: center;
     margin-bottom: 40px;
     font-weight: bold;
@@ -102,7 +102,9 @@
     /* Hidden by default */
     transition: opacity 0.3s ease;
     /* Smooth opacity transition */
+    cursor: pointer;
 }
+
 
 /* Show CTA on hover */
 .collaborations-item:hover .collaboration-cta {
