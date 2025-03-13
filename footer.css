@@ -1,0 +1,229 @@
+/* Footer Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Added body style for default font */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer {
+    background-color: #000;
+    /* Ensure the black background */
+    color: #fff;
+    padding: 40px 0 20px;
+    width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Top Footer Section */
+.top-footer {
+    display: flex;
+    justify-content: space-between;
+    /* This spreads items evenly */
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+/* Logo */
+.logo-container {
+    flex: 0 0 auto;
+}
+
+.woolmark-logo {
+    width: 80px;
+    height: auto;
+}
+
+/* Language Section */
+.language-section {
+    flex: 0 0 auto;
+    /* Added margin for better spacing in desktop view */
+    margin-right: 20px;
+}
+
+.section-title {
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+/* Removed duplicate language-dropdown select styling */
+.language-dropdown select {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #555;
+    padding: 10px 15px;
+    width: 250px;
+    font-size: 14px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+}
+
+/* Newsletter Section */
+.newsletter-section {
+    flex: 0 0 auto;
+    /* Added margin for better spacing in desktop view */
+    margin-right: 20px;
+}
+
+.subscribe-btn {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #555;
+    padding: 10px 15px;
+    width: 250px;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.subscribe-btn:hover {
+    background-color: #333;
+}
+
+/* Social Media Icons */
+.social-media {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-icon {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #ccc;
+}
+
+/* Footer Navigation */
+.footer-nav {
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    /* Centers the navigation items */
+    flex-wrap: wrap;
+    list-style: none;
+    /* Removes bullets from list items */
+    gap: 30px;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.nav-links li a:hover {
+    color: #ccc;
+}
+
+/* Added styles for navigation links to display as blue links like in your screenshot */
+.nav-links li a {
+    color: #007bff;
+    /* Blue color for links */
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.nav-links li a:hover {
+    color: #0056b3;
+    /* Darker blue on hover */
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 1200px) {
+    .top-footer {
+        gap: 30px;
+    }
+
+    /* Added better spacing between elements when they start to wrap */
+    .language-section,
+    .newsletter-section {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .top-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+    }
+
+    .social-media {
+        margin-top: 10px;
+    }
+
+    /* Removed margins that are not needed in column layout */
+    .language-section,
+    .newsletter-section {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .language-dropdown select,
+    .subscribe-btn {
+        width: 100%;
+        max-width: 250px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .nav-links li {
+        margin-bottom: 5px;
+    }
+
+    /* Make lists display properly on mobile */
+    .nav-links li:before {
+        content: "• ";
+        /* Added bullet point character */
+        color: #007bff;
+        /* Same blue as links */
+    }
+}
