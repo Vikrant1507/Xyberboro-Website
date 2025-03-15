@@ -1,61 +1,149 @@
 /* Footer Styles */
 .footer {
     background-color: #000;
-    /* Black background */
     color: #fff;
-    /* White text */
-    padding: 20px 0;
+    padding: 30px 0;
+    font-family: Arial, sans-serif;
 }
 
-.footer .footer-top {
+.footer-container {
+    width: 90%;
+    margin: auto;
+}
+
+/* Footer Top Row */
+.footer-top {
     display: flex;
-    flex-wrap: wrap;
-    /* Ensures responsiveness */
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
 }
 
-.footer .footer-logo img {
+/* Logo */
+.footer-logo img {
     max-width: 100px;
 }
 
-.footer .language-selector,
-.footer .newsletter-subscription {
+/* Language Selector */
+.language-selector {
     text-align: center;
-    /* Center-aligned content */
 }
 
-.footer .language-selector select,
-.footer .newsletter-subscription input {
-    width: auto;
-    /* Adjusted width */
+.language-selector label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+    font-weight: bold;
 }
 
-.footer .social-icons a {
-    margin-left: 10px;
-    /* Adjusted spacing between icons */
+.language-selector select {
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+/* Newsletter Subscription */
+.newsletter-subscription {
+    text-align: center;
+}
+
+.newsletter-subscription label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.newsletter-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.newsletter-input input {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: none;
+    width: 220px;
+}
+
+.newsletter-input button {
+    padding: 10px 15px;
+    font-size: 14px;
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.newsletter-input button:hover {
+    background-color: #ff6347;
+}
+
+/* Social Media Icons */
+.social-icons {
+    text-align: center;
+}
+
+.social-icons a {
+    margin: 0 8px;
+    color: #fff;
     font-size: 20px;
-    color: black;
+}
+
+.social-icons a:hover {
+    color: #ff4500;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
 }
 
 .footer-bottom nav ul {
+    list-style-type: none;
     padding: 0;
-    margin: 0;
-    /* for footer made margin and padding zero */
 }
 
 .footer-bottom nav ul li {
-    display: inline-block;
-    /* Ensures horizontal alignment */
+    display: inline;
+    margin-right: 15px;
 }
 
 .footer-bottom nav ul li a {
     color: #fff;
     text-decoration: none;
-    padding-left: 15px;
-    /* Adjusted spacing between links */
+    font-size: 14px;
 }
 
 .footer-bottom nav ul li a:hover {
     text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-top {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .newsletter-input {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .newsletter-input input {
+        width: 100%;
+    }
+
+    .social-icons a {
+        display: inline-block;
+        margin: 5px;
+    }
 }

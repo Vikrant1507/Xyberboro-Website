@@ -295,19 +295,18 @@
 
   <!-- Footer Section -->
   <footer class="footer">
-    <div class="container">
+    <div class="footer-container">
       <!-- Footer Top Row -->
-      <div class="footer-top d-flex justify-content-between align-items-center">
+      <div class="footer-top">
         <!-- Logo -->
         <div class="footer-logo">
-          <img src="https://www.logodesignlove.com/images/classic/woolmark-logo.gif" alt="Woolmark Logo" width="100">
+          <img src="https://www.logodesignlove.com/images/classic/woolmark-logo.gif" alt="Woolmark Logo">
         </div>
 
         <!-- Language Selector -->
         <div class="language-selector">
-          <!-- Added proper spacing and alignment -->
-          <label for="language" class="text-white mb-2 d-block">SELECT YOUR LANGUAGE</label>
-          <select id="language" class="form-control w-auto"> <!-- Added 'w-auto' for width adjustment -->
+          <label for="language">SELECT YOUR LANGUAGE</label>
+          <select id="language">
             <option value="english">English</option>
             <option value="spanish">Español</option>
             <option value="french">Français</option>
@@ -315,53 +314,46 @@
         </div>
 
         <!-- Newsletter Subscription -->
-        <div class="newsletter-subscription text-center">
-          <!-- Added proper spacing and alignment -->
-          <label for="newsletter" class="text-white mb-2 d-block">SUBSCRIBE TO OUR NEWSLETTER</label>
-          <div class="d-flex align-items-center">
-            <input type="email" id="newsletter" class="form-control w-auto" placeholder="Enter your email">
-            <!-- Added 'w-auto' for width adjustment -->
-            <button class="btn btn-outline-light ml-2">SUBSCRIBE</button>
+        <div class="newsletter-subscription">
+          <label for="newsletter">SUBSCRIBE TO OUR NEWSLETTER</label>
+          <div class="newsletter-input">
+            <input type="email" id="newsletter" placeholder="Enter your email">
+            <button>SUBSCRIBE</button>
           </div>
         </div>
 
         <!-- Social Media Icons -->
         <div class="social-icons">
-          <!-- Adjusted spacing between icons -->
-          <a href="#" class="text-white mx-2"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="text-white mx-2"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="text-white mx-2"><i class="fab fa-youtube"></i></a>
-          <a href="#" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="text-white mx-2"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#" class="text-white mx-2"><i class="fab fa-pinterest"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-pinterest"></i></a>
         </div>
       </div>
 
       <!-- Footer Bottom Row -->
-      <div class="footer-bottom text-center mt-4">
-        <!-- Navigation Links -->
+      <div class="footer-bottom">
         <nav>
-          <!-- Adjusted spacing between links -->
-          <ul class="list-inline mb-0">
-            <li class="list-inline-item"><a href="#" class="text-white px-3">ABOUT US</a></li>
-            <!-- Added 'px-3' for spacing -->
-            <li class="list-inline-item"><a href="#" class="text-white px-3">WOOLMARK LOGO</a></li>
-            <!-- Added 'px-3' for spacing -->
-            <li class="list-inline-item"><a href="#" class="text-white px-3">CAREERS</a></li>
-            <!-- Added 'px-3' for spacing -->
-            <li class="list-inline-item"><a href="#" class="text-white px-3">CONTACT</a></li>
-            <!-- Added 'px-3' for spacing -->
-            <li class="list-inline-item"><a href="#" class="text-white px-3">LEGAL</a></li>
-            <!-- Added 'px-3' for spacing -->
-            <li class="list-inline-item"><a href="#" class="text-white px-3">MISUSE</a></li>
-            <!-- Added 'px-3' for spacing -->
-            <li class="list-inline-item"><a href="#" class="text-white px-3">MORE</a></li>
-            <!-- Added 'px-3' for spacing -->
+          <ul>
+            <li><a href="#">ABOUT US</a></li>
+            <li><a href="#">WOOLMARK LOGO</a></li>
+            <li><a href="#">CAREERS</a></li>
+            <li><a href="#">CONTACT</a></li>
+            <li><a href="#">LEGAL</a></li>
+            <li><a href="#">MISUSE</a></li>
+            <li><a href="#">MORE</a></li>
           </ul>
         </nav>
       </div>
     </div>
   </footer>
+
+
+  <!-- Font Awesome Dependency -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 
 
 
