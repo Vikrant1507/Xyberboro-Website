@@ -41,6 +41,7 @@
 .footer-bottom nav ul {
     padding: 0;
     margin: 0;
+    /* for footer made margin and padding zero */
 }
 
 .footer-bottom nav ul li {
